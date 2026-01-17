@@ -2,105 +2,26 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Для Лизы ❤️</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            background: #000;
-            color: #fff;
-            font-family: 'Arial Black', sans-serif;
-            height: 100vh;
-            overflow: hidden;
-        }
-        
-        #hearts {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-        
-        .heart {
-            position: absolute;
-            color: #ff4d6d;
-            font-size: 20px;
-            animation: float 20s infinite linear;
-        }
-        
-        @keyframes float {
-            0% {
-                transform: translateY(100vh) rotate(0deg);
-                opacity: 0;
-            }
-            10% {
-                opacity: 1;
-            }
-            90% {
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-100px) rotate(360deg);
-                opacity: 0;
-            }
-        }
-        
-        .container {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-        }
-        
-        .main-text {
-            font-size: 8vw;
-            margin-bottom: 20px;
-            color: #ff4d6d;
-        }
-        
-        .names {
-            font-size: 10vw;
-            color: #fff;
-        }
-    </style>
+    <title>Для Лизы</title>
 </head>
 <body>
-    <div id="hearts"></div>
-    
-    <div class="container">
-        <div class="main-text">Любимой Лизе</div>
-        <div class="names">Лиза ❤️ Миша</div>
+    <div style="
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background: black;
+        color: white;
+        font-family: Arial;
+    ">
+        <div style="font-size: 60px; color: red; margin-bottom: 30px;">
+            Любимой Лизе
+        </div>
+        <div style="font-size: 80px;">
+            Лиза ❤️ Миша
+        </div>
     </div>
-
-    <script>
-        // Создаем сердечки на фоне
-        function createHearts() {
-            const container = document.getElementById('hearts');
-            
-            for (let i = 0; i < 50; i++) {
-                const heart = document.createElement('div');
-                heart.classList.add('heart');
-                heart.innerHTML = '❤️';
-                heart.style.left = `${Math.random() * 100}%`;
-                heart.style.fontSize = `${Math.random() * 30 + 20}px`;
-                heart.style.animationDuration = `${Math.random() * 15 + 15}s`;
-                heart.style.animationDelay = `${Math.random() * 5}s`;
-                container.appendChild(heart);
-            }
-        }
-        
-        // Запускаем при загрузке
-        window.addEventListener('load', createHearts);
-    </script>
 </body>
 </html>
