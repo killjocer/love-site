@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Для моей любимой Лизы ❤️ От Миши</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:wght@700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>Для Лизы ❤️</title>
     <style>
         * {
             margin: 0;
@@ -13,73 +11,40 @@
             box-sizing: border-box;
         }
         
-        :root {
-            --primary-color: #ff4d6d;
-            --secondary-color: #ff8fa3;
-            --accent-color: #ffccd5;
-            --gold-color: #ffd700;
-            --dark-color: #590d22;
-            --light-color: #fff0f3;
-            --gradient: linear-gradient(135deg, #ff4d6d, #ff8fa3, #ffccd5);
-            --box-shadow: 0 10px 30px rgba(255, 77, 109, 0.25);
-            --text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        
         body {
-            background-color: var(--light-color);
-            color: var(--dark-color);
-            font-family: 'Roboto', sans-serif;
-            overflow-x: hidden;
-            background-image: 
-                url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ff4d6d' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
-        }
-        
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        /* Header */
-        .main-header {
-            text-align: center;
-            padding: 60px 20px;
-            position: relative;
+            background: #000;
+            color: #fff;
+            font-family: 'Arial Black', sans-serif;
+            height: 100vh;
             overflow: hidden;
-            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 240, 243, 0.9));
-            border-radius: 30px;
-            margin-bottom: 40px;
-            box-shadow: var(--box-shadow);
         }
         
-        .floating-hearts {
-            position: absolute;
-            width: 100%;
-            height: 100%;
+        #hearts {
+            position: fixed;
             top: 0;
             left: 0;
-            pointer-events: none;
-            z-index: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
         }
         
-        .floating-heart {
+        .heart {
             position: absolute;
-            font-size: 2rem;
-            color: var(--primary-color);
-            opacity: 0.7;
-            animation: floatHearts 20s infinite linear;
+            color: #ff4d6d;
+            font-size: 20px;
+            animation: float 20s infinite linear;
         }
         
-        @keyframes floatHearts {
+        @keyframes float {
             0% {
                 transform: translateY(100vh) rotate(0deg);
                 opacity: 0;
             }
             10% {
-                opacity: 0.7;
+                opacity: 1;
             }
             90% {
-                opacity: 0.7;
+                opacity: 1;
             }
             100% {
                 transform: translateY(-100px) rotate(360deg);
@@ -87,806 +52,55 @@
             }
         }
         
-        .main-title {
-            font-family: 'Dancing Script', cursive;
-            font-size: 5.5rem;
-            color: var(--primary-color);
-            margin-bottom: 20px;
-            text-shadow: var(--text-shadow);
-            position: relative;
-            z-index: 1;
-            animation: titleGlow 3s infinite alternate;
+        .container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
         }
         
-        @keyframes titleGlow {
-            0% {
-                text-shadow: 0 0 10px rgba(255, 77, 109, 0.5);
-            }
-            100% {
-                text-shadow: 0 0 25px rgba(255, 77, 109, 0.8), 0 0 35px rgba(255, 77, 109, 0.6);
-            }
+        .main-text {
+            font-size: 8vw;
+            margin-bottom: 20px;
+            color: #ff4d6d;
         }
         
         .names {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
-            color: var(--dark-color);
-            margin-bottom: 30px;
-            position: relative;
-            display: inline-block;
-            padding: 0 20px;
-        }
-        
-        .names::before, .names::after {
-            content: "❤️";
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 2rem;
-        }
-        
-        .names::before {
-            left: -40px;
-        }
-        
-        .names::after {
-            right: -40px;
-        }
-        
-        .subtitle {
-            font-size: 1.8rem;
-            color: var(--dark-color);
-            max-width: 900px;
-            margin: 0 auto 40px;
-            line-height: 1.6;
-            font-weight: 300;
-        }
-        
-        /* Love Letter Section */
-        .love-letter-section {
-            background: white;
-            border-radius: 25px;
-            padding: 60px;
-            margin: 60px auto;
-            box-shadow: var(--box-shadow);
-            position: relative;
-            border: 5px solid var(--accent-color);
-            max-width: 1000px;
-        }
-        
-        .letter-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        
-        .letter-header h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.8rem;
-            color: var(--primary-color);
-            margin-bottom: 10px;
-        }
-        
-        .letter-date {
-            font-style: italic;
-            color: var(--gray-color);
-            font-size: 1.2rem;
-        }
-        
-        .letter-content {
-            font-size: 1.6rem;
-            line-height: 1.9;
-            text-align: justify;
-            padding: 0 20px;
-        }
-        
-        .letter-signature {
-            text-align: right;
-            margin-top: 50px;
-            font-family: 'Dancing Script', cursive;
-            font-size: 3rem;
-            color: var(--primary-color);
-            position: relative;
-            padding-right: 100px;
-        }
-        
-        .letter-signature::before {
-            content: "💕";
-            position: absolute;
-            right: 30px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 2.5rem;
-        }
-        
-        /* Photo Gallery */
-        .gallery-section {
-            padding: 80px 20px;
-            text-align: center;
-        }
-        
-        .gallery-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 3rem;
-            color: var(--primary-color);
-            margin-bottom: 50px;
-        }
-        
-        .photo-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .photo-frame {
-            background: white;
-            border-radius: 20px;
-            padding: 20px;
-            box-shadow: var(--box-shadow);
-            transition: all 0.4s ease;
-            border: 3px solid var(--accent-color);
-            position: relative;
-            overflow: hidden;
-            min-height: 350px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .photo-frame:hover {
-            transform: translateY(-15px) scale(1.03);
-            box-shadow: 0 20px 40px rgba(255, 77, 109, 0.3);
-        }
-        
-        .photo-placeholder {
-            width: 100%;
-            height: 250px;
-            background: linear-gradient(45deg, var(--accent-color), var(--secondary-color));
-            border-radius: 15px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            font-size: 5rem;
-            margin-bottom: 20px;
-        }
-        
-        .photo-caption {
-            font-size: 1.3rem;
-            color: var(--dark-color);
-            font-weight: 500;
-            text-align: center;
-        }
-        
-        /* Memories Timeline */
-        .timeline-section {
-            padding: 80px 20px;
-            background: linear-gradient(135deg, var(--accent-color), white);
-            border-radius: 30px;
-            margin: 60px 0;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .timeline-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 3rem;
-            color: var(--dark-color);
-            text-align: center;
-            margin-bottom: 60px;
-        }
-        
-        .timeline {
-            position: relative;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 4px;
-            background: var(--primary-color);
-            transform: translateX(-50%);
-        }
-        
-        .timeline-item {
-            margin-bottom: 60px;
-            position: relative;
-            width: 45%;
-        }
-        
-        .timeline-item:nth-child(odd) {
-            left: 0;
-        }
-        
-        .timeline-item:nth-child(even) {
-            left: 55%;
-        }
-        
-        .timeline-content {
-            background: white;
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: var(--box-shadow);
-            border-left: 5px solid var(--primary-color);
-        }
-        
-        .timeline-date {
-            font-weight: bold;
-            color: var(--primary-color);
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-        }
-        
-        .timeline-text {
-            font-size: 1.2rem;
-            line-height: 1.6;
-        }
-        
-        /* Love Meter */
-        .love-meter-section {
-            padding: 80px 20px;
-            text-align: center;
-            background: white;
-            border-radius: 30px;
-            margin: 60px 0;
-            box-shadow: var(--box-shadow);
-        }
-        
-        .meter-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .meter-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.8rem;
-            color: var(--primary-color);
-            margin-bottom: 40px;
-        }
-        
-        .love-meter {
-            width: 100%;
-            height: 60px;
-            background: var(--light-color);
-            border-radius: 30px;
-            margin: 40px auto;
-            overflow: hidden;
-            position: relative;
-            border: 3px solid var(--accent-color);
-        }
-        
-        .meter-fill {
-            height: 100%;
-            background: var(--gradient);
-            width: 0%;
-            border-radius: 30px;
-            animation: fillMeter 4s ease-out forwards;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .meter-fill::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-            animation: shine 2s infinite;
-        }
-        
-        @keyframes fillMeter {
-            0% { width: 0%; }
-            100% { width: 100%; }
-        }
-        
-        @keyframes shine {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(100%); }
-        }
-        
-        .meter-value {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            font-weight: bold;
-            margin-top: 20px;
-        }
-        
-        /* Final Section */
-        .final-section {
-            text-align: center;
-            padding: 100px 20px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            border-radius: 40px;
-            margin: 60px 0;
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .final-title {
-            font-family: 'Dancing Script', cursive;
-            font-size: 4.5rem;
-            margin-bottom: 30px;
-            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-        
-        .final-message {
-            font-size: 2.2rem;
-            max-width: 900px;
-            margin: 0 auto 50px;
-            line-height: 1.7;
-        }
-        
-        .kiss-button {
-            background: white;
-            color: var(--primary-color);
-            border: none;
-            padding: 20px 60px;
-            font-size: 1.8rem;
-            border-radius: 50px;
-            cursor: pointer;
-            font-weight: bold;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 15px;
-        }
-        
-        .kiss-button:hover {
-            transform: translateY(-10px) scale(1.1);
-            box-shadow: 0 25px 40px rgba(0, 0, 0, 0.3);
-        }
-        
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 50px 20px;
-            color: var(--dark-color);
-            border-top: 2px solid var(--accent-color);
-            margin-top: 60px;
-        }
-        
-        .footer-heart {
-            color: var(--primary-color);
-            animation: heartbeat 1s infinite;
-            display: inline-block;
-        }
-        
-        @keyframes heartbeat {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.3); }
-        }
-        
-        /* Responsive */
-        @media (max-width: 1100px) {
-            .main-title {
-                font-size: 4.5rem;
-            }
-            
-            .names {
-                font-size: 2.8rem;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .main-title {
-                font-size: 3.5rem;
-            }
-            
-            .names {
-                font-size: 2.2rem;
-            }
-            
-            .love-letter-section {
-                padding: 30px;
-            }
-            
-            .letter-content {
-                font-size: 1.4rem;
-            }
-            
-            .timeline::before {
-                left: 30px;
-            }
-            
-            .timeline-item {
-                width: 100%;
-                left: 0 !important;
-                padding-left: 70px;
-            }
-            
-            .final-title {
-                font-size: 3.5rem;
-            }
-            
-            .final-message {
-                font-size: 1.8rem;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .main-title {
-                font-size: 2.8rem;
-            }
-            
-            .names {
-                font-size: 1.8rem;
-            }
-            
-            .letter-content {
-                font-size: 1.2rem;
-                padding: 0;
-            }
-            
-            .photo-grid {
-                grid-template-columns: 1fr;
-            }
+            font-size: 10vw;
+            color: #fff;
         }
     </style>
 </head>
 <body>
+    <div id="hearts"></div>
+    
     <div class="container">
-        <!-- Header with Names -->
-        <header class="main-header">
-            <div class="floating-hearts" id="floatingHearts"></div>
-            
-            <h1 class="main-title">Любимой Лизе</h1>
-            <div class="names">Лиза ❤️ Миша</div>
-            <p class="subtitle">Этот сайт создан специально для тебя, моя самая прекрасная, добрая и любимая Лиза. Здесь всё о нас и о моей бесконечной любви к тебе.</p>
-            
-            <div style="margin-top: 40px; font-size: 1.5rem; color: var(--primary-color);">
-                <i class="fas fa-heart" style="margin: 0 10px;"></i>
-                Ты — моё самое большое счастье
-                <i class="fas fa-heart" style="margin: 0 10px;"></i>
-            </div>
-        </header>
-        
-        <!-- Love Letter -->
-        <section class="love-letter-section">
-            <div class="letter-header">
-                <h2>Письмо моей любимой</h2>
-                <div class="letter-date">Навсегда в моём сердце</div>
-            </div>
-            
-            <div class="letter-content">
-                <p>Моя дорогая Лиза,</p>
-                
-                <p>Я пишу эти слова, чтобы ты всегда помнила, как сильно ты любима. С того момента, как ты появилась в моей жизни, всё изменилось. Ты принесла в мой мир свет, тепло и бесконечную радость.</p>
-                
-                <p>Твоя улыбка — это солнце, которое согревает меня даже в самый холодный день. Твой смех — самая прекрасная музыка, которую я когда-либо слышал. Твои глаза — целая вселенная, в которой я готов потеряться навсегда.</p>
-                
-                <p>Каждый день с тобой — это подарок. Каждая минута рядом с тобой — это счастье. Ты делаешь меня лучше, сильнее, добрее. С тобой я чувствую, что могу свернуть горы, достичь любых вершин.</p>
-                
-                <p>Я обещаю любить тебя каждый день, поддерживать в трудные моменты, радоваться твоим успехам, быть твоей опорой и самым верным другом. Моя любовь к тебе будет только расти с каждым днём.</p>
-                
-                <p>Ты — моя самая большая мечта, которая сбылась. Ты — моё всё.</p>
-            </div>
-            
-            <div class="letter-signature">Твой Миша</div>
-        </section>
-        
-        <!-- Photo Gallery -->
-        <section class="gallery-section">
-            <h2 class="gallery-title">Наши счастливые моменты</h2>
-            
-            <div class="photo-grid">
-                <div class="photo-frame">
-                    <div class="photo-placeholder">
-                        📸
-                        <div style="font-size: 1.2rem; margin-top: 15px;">Наше первое фото</div>
-                    </div>
-                    <div class="photo-caption">Тот день, когда всё началось</div>
-                </div>
-                
-                <div class="photo-frame">
-                    <div class="photo-placeholder">
-                        🌟
-                        <div style="font-size: 1.2rem; margin-top: 15px;">Твоя улыбка</div>
-                    </div>
-                    <div class="photo-caption">Самое красивое, что я видел</div>
-                </div>
-                
-                <div class="photo-frame">
-                    <div class="photo-placeholder">
-                        💕
-                        <div style="font-size: 1.2rem; margin-top: 15px;">Вместе навсегда</div>
-                    </div>
-                    <div class="photo-caption">Наше будущее, которое ждёт нас</div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Memories Timeline -->
-        <section class="timeline-section">
-            <h2 class="timeline-title">История нашей любви</h2>
-            
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-date">Наше первое знакомство</div>
-                        <div class="timeline-text">Тот день, когда я впервые увидел тебя. Моё сердце сразу поняло — это ты.</div>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-date">Первое свидание</div>
-                        <div class="timeline-text">Мы говорили обо всём на свете, и время пролетело незаметно.</div>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-date">Первый поцелуй</div>
-                        <div class="timeline-text">Самый волшебный момент в моей жизни. Я до сих пор чувствую это тепло.</div>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-date">"Я тебя люблю"</div>
-                        <div class="timeline-text">Слова, которые изменили всё. И я повторяю их каждый день.</div>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-date">Сегодня</div>
-                        <div class="timeline-text">Каждый день с тобой — это новый повод для счастья.</div>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-date">Наше будущее</div>
-                        <div class="timeline-text">Вместе мы создадим самую прекрасную историю любви.</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Love Meter -->
-        <section class="love-meter-section">
-            <div class="meter-container">
-                <h2 class="meter-title">Моя любовь к тебе</h2>
-                
-                <div class="love-meter">
-                    <div class="meter-fill"></div>
-                </div>
-                
-                <div class="meter-value">Бесконечность + ∞</div>
-                
-                <p style="font-size: 1.5rem; margin-top: 30px; color: var(--dark-color);">
-                    Моя любовь к тебе не имеет границ и измерений. Она просто есть, и она вечна.
-                </p>
-            </div>
-        </section>
-        
-        <!-- Final Section -->
-        <section class="final-section">
-            <h2 class="final-title">Моя самая любимая Лиза</h2>
-            
-            <div class="final-message">
-                Ты — самая прекрасная, добрая, умная и невероятная девушка на свете. 
-                Каждый день я благодарю судьбу за то, что ты есть в моей жизни.
-            </div>
-            
-            <button class="kiss-button" id="kissButton">
-                <i class="fas fa-heart"></i>
-                Отправить миллион поцелуев
-                <i class="fas fa-heart"></i>
-            </button>
-            
-            <div style="margin-top: 50px; font-size: 1.8rem;">
-                Люблю тебя больше жизни ❤️<br>
-                Твой Миша
-            </div>
-        </section>
-        
-        <!-- Footer -->
-        <footer>
-            <p style="font-size: 1.3rem; margin-bottom: 20px;">
-                Этот сайт будет всегда напоминать тебе о моей любви
-            </p>
-            <p>
-                Создано с <span class="footer-heart">❤️</span> специально для Лизы
-            </p>
-            <p style="margin-top: 20px; font-size: 0.9rem; color: var(--gray-color);">
-                © Навеки твой Миша | Любовь навсегда
-            </p>
-        </footer>
+        <div class="main-text">Любимой Лизе</div>
+        <div class="names">Лиза ❤️ Миша</div>
     </div>
 
     <script>
-        // Create floating hearts
-        function createFloatingHearts() {
-            const container = document.getElementById('floatingHearts');
-            const heartCount = 25;
+        // Создаем сердечки на фоне
+        function createHearts() {
+            const container = document.getElementById('hearts');
             
-            for (let i = 0; i < heartCount; i++) {
+            for (let i = 0; i < 50; i++) {
                 const heart = document.createElement('div');
-                heart.classList.add('floating-heart');
+                heart.classList.add('heart');
                 heart.innerHTML = '❤️';
                 heart.style.left = `${Math.random() * 100}%`;
-                heart.style.fontSize = `${Math.random() * 20 + 20}px`;
-                heart.style.animationDuration = `${Math.random() * 15 + 20}s`;
-                heart.style.animationDelay = `${Math.random() * 10}s`;
+                heart.style.fontSize = `${Math.random() * 30 + 20}px`;
+                heart.style.animationDuration = `${Math.random() * 15 + 15}s`;
+                heart.style.animationDelay = `${Math.random() * 5}s`;
                 container.appendChild(heart);
             }
         }
         
-        // Kiss button effect
-        document.getElementById('kissButton').addEventListener('click', function() {
-            const btn = this;
-            const originalText = btn.innerHTML;
-            
-            // Change button text
-            btn.innerHTML = '<i class="fas fa-heart"></i> Поцелуи отправлены! <i class="fas fa-heart"></i>';
-            btn.style.background = 'var(--gold-color)';
-            
-            // Create flying kisses
-            createKissAnimation();
-            
-            // Play sound
-            playLoveSound();
-            
-            // Reset button after 3 seconds
-            setTimeout(() => {
-                btn.innerHTML = originalText;
-                btn.style.background = 'white';
-            }, 3000);
-        });
-        
-        // Create kiss animation
-        function createKissAnimation() {
-            for (let i = 0; i < 50; i++) {
-                setTimeout(() => {
-                    createFlyingKiss();
-                }, i * 50);
-            }
-        }
-        
-        // Create a flying kiss element
-        function createFlyingKiss() {
-            const kiss = document.createElement('div');
-            kiss.innerHTML = '💋';
-            kiss.style.position = 'fixed';
-            kiss.style.fontSize = '30px';
-            kiss.style.zIndex = '10000';
-            kiss.style.pointerEvents = 'none';
-            kiss.style.left = `${Math.random() * 100}%`;
-            kiss.style.top = '100%';
-            
-            document.body.appendChild(kiss);
-            
-            // Animation
-            const animation = kiss.animate([
-                { 
-                    transform: 'translateY(0) rotate(0deg)', 
-                    opacity: 1 
-                },
-                { 
-                    transform: `translateY(-100vh) rotate(${Math.random() * 720}deg)`, 
-                    opacity: 0 
-                }
-            ], {
-                duration: Math.random() * 2000 + 2000,
-                easing: 'cubic-bezier(0.215, 0.610, 0.355, 1)'
-            });
-            
-            // Remove after animation
-            animation.onfinish = () => {
-                kiss.remove();
-            };
-        }
-        
-        // Play love sound
-        function playLoveSound() {
-            try {
-                const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-                
-                // Create a pleasant love sound
-                for (let i = 0; i < 3; i++) {
-                    setTimeout(() => {
-                        const oscillator = audioContext.createOscillator();
-                        const gainNode = audioContext.createGain();
-                        
-                        oscillator.connect(gainNode);
-                        gainNode.connect(audioContext.destination);
-                        
-                        oscillator.type = 'sine';
-                        oscillator.frequency.setValueAtTime(440 + (i * 100), audioContext.currentTime);
-                        
-                        gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
-                        gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
-                        
-                        oscillator.start(audioContext.currentTime);
-                        oscillator.stop(audioContext.currentTime + 0.5);
-                    }, i * 200);
-                }
-            } catch (e) {
-                // Sound not supported, continue without it
-            }
-        }
-        
-        // Add click hearts anywhere
-        document.addEventListener('click', function(e) {
-            if (e.target.id !== 'kissButton') {
-                createClickHeart(e.clientX, e.clientY);
-            }
-        });
-        
-        // Create heart on click
-        function createClickHeart(x, y) {
-            const heart = document.createElement('div');
-            heart.innerHTML = '❤️';
-            heart.style.position = 'fixed';
-            heart.style.left = `${x}px`;
-            heart.style.top = `${y}px`;
-            heart.style.fontSize = '25px';
-            heart.style.zIndex = '10000';
-            heart.style.pointerEvents = 'none';
-            heart.style.transform = 'translate(-50%, -50%)';
-            
-            document.body.appendChild(heart);
-            
-            // Animate
-            heart.animate([
-                { 
-                    transform: 'translate(-50%, -50%) scale(0.5)', 
-                    opacity: 0 
-                },
-                { 
-                    transform: 'translate(-50%, -50%) scale(1.2)', 
-                    opacity: 1 
-                },
-                { 
-                    transform: 'translate(-50%, -150%) scale(0.8)', 
-                    opacity: 0 
-                }
-            ], {
-                duration: 2000,
-                easing: 'ease-out'
-            });
-            
-            // Remove after animation
-            setTimeout(() => {
-                heart.remove();
-            }, 2000);
-        }
-        
-        // Initialize on load
-        window.addEventListener('load', function() {
-            createFloatingHearts();
-            
-            // Add subtle animation to main title
-            const title = document.querySelector('.main-title');
-            setInterval(() => {
-                title.style.transform = `scale(${1 + Math.sin(Date.now() / 1000) * 0.02})`;
-            }, 50);
-        });
-        
-        // Add parallax effect to some elements
-        window.addEventListener('scroll', function() {
-            const scrolled = window.pageYOffset;
-            const rate = scrolled * -0.5;
-            
-            const title = document.querySelector('.main-title');
-            if (title) {
-                title.style.transform = `translateY(${rate * 0.1}px)`;
-            }
-        });
+        // Запускаем при загрузке
+        window.addEventListener('load', createHearts);
     </script>
 </body>
 </html>
